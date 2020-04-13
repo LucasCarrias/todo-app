@@ -14,6 +14,10 @@ $("input[type='text']").on("keypress", function (event) {
         textContent = $(this).val();
         $(this).val("");
 
-        $("ul").append("<li> <span class=\"deleteIcon\">X</span> "+ textContent +"</li>");
+        $("ul").append("<li> <span class=\"deleteIcon\"><i class=\"far fa-trash-alt\"></i></span> "+ textContent +"</li>");
     }
+});
+
+$(".addIcon").on("click", function(){
+    $("input[type='text']").fadeToggle(200);
 });
